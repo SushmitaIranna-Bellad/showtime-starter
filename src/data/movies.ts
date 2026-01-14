@@ -1,7 +1,7 @@
 import { Movie } from "@/types/movie";
 
 export const featuredMovie: Movie = {
-  id: 0,
+  id: "11111111-1111-1111-1111-111111111111",
   title: "Pushpa 2: The Rule",
   poster: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=1920&q=80",
   rating: 9.2,
@@ -9,69 +9,76 @@ export const featuredMovie: Movie = {
   genres: ["Action", "Drama", "Thriller"],
   language: "Telugu",
   duration: "3h 20m",
-  description: "Pushpa Raj returns with more power, more drama, and an epic showdown that will keep you on the edge of your seat."
+  description: "Pushpa Raj returns with more power, more drama, and an epic showdown that will keep you on the edge of your seat.",
+  status: "now_showing",
 };
 
 export const nowShowingMovies: Movie[] = [
   {
-    id: 1,
+    id: "22222222-2222-2222-2222-222222222222",
     title: "Dune: Part Two",
     poster: "https://images.unsplash.com/photo-1534809027769-b00d750a6bac?w=500&q=80",
     rating: 8.8,
     votes: "850K",
     genres: ["Sci-Fi", "Adventure"],
     language: "English",
+    status: "now_showing",
   },
   {
-    id: 2,
+    id: "33333333-3333-3333-3333-333333333333",
     title: "Kung Fu Panda 4",
     poster: "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=500&q=80",
     rating: 7.5,
     votes: "320K",
     genres: ["Animation", "Comedy"],
     language: "English",
+    status: "now_showing",
   },
   {
-    id: 3,
+    id: "44444444-4444-4444-4444-444444444444",
     title: "Fighter",
     poster: "https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?w=500&q=80",
     rating: 8.1,
     votes: "580K",
     genres: ["Action", "Patriotic"],
     language: "Hindi",
+    status: "now_showing",
   },
   {
-    id: 4,
+    id: "55555555-5555-5555-5555-555555555555",
     title: "Shaitaan",
     poster: "https://images.unsplash.com/photo-1509347528160-9a9e33742cdb?w=500&q=80",
     rating: 8.4,
     votes: "420K",
     genres: ["Horror", "Thriller"],
     language: "Hindi",
+    status: "now_showing",
   },
   {
-    id: 5,
+    id: "66666666-6666-6666-6666-666666666666",
     title: "Crew",
     poster: "https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=500&q=80",
     rating: 7.9,
     votes: "290K",
     genres: ["Comedy", "Crime"],
     language: "Hindi",
+    status: "now_showing",
   },
   {
-    id: 6,
-    title: "Godzilla x Kong",
-    poster: "https://images.unsplash.com/photo-1594909122845-11baa439b7bf?w=500&q=80",
-    rating: 8.0,
-    votes: "670K",
-    genres: ["Action", "Sci-Fi"],
-    language: "English",
+    id: "11111111-1111-1111-1111-111111111111",
+    title: "Pushpa 2: The Rule",
+    poster: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=500&q=80",
+    rating: 9.2,
+    votes: "1.2M",
+    genres: ["Action", "Drama"],
+    language: "Telugu",
+    status: "now_showing",
   },
 ];
 
 export const comingSoonMovies: Movie[] = [
   {
-    id: 7,
+    id: "77777777-7777-7777-7777-777777777777",
     title: "Deadpool & Wolverine",
     poster: "https://images.unsplash.com/photo-1635805737707-575885ab0820?w=500&q=80",
     rating: 0,
@@ -79,9 +86,10 @@ export const comingSoonMovies: Movie[] = [
     genres: ["Action", "Comedy"],
     language: "English",
     releaseDate: "26 Jul",
+    status: "coming_soon",
   },
   {
-    id: 8,
+    id: "88888888-8888-8888-8888-888888888888",
     title: "Kalki 2898 AD",
     poster: "https://images.unsplash.com/photo-1518676590629-3dcbd9c5a5c9?w=500&q=80",
     rating: 0,
@@ -89,6 +97,7 @@ export const comingSoonMovies: Movie[] = [
     genres: ["Sci-Fi", "Action"],
     language: "Telugu",
     releaseDate: "27 Jun",
+    status: "coming_soon",
   },
   {
     id: 9,
@@ -99,6 +108,7 @@ export const comingSoonMovies: Movie[] = [
     genres: ["Horror", "Comedy"],
     language: "Hindi",
     releaseDate: "1 Nov",
+    status: "coming_soon",
   },
   {
     id: 10,
@@ -109,6 +119,7 @@ export const comingSoonMovies: Movie[] = [
     genres: ["Action", "Drama"],
     language: "Hindi",
     releaseDate: "15 Aug",
+    status: "coming_soon",
   },
   {
     id: 11,
@@ -119,5 +130,6 @@ export const comingSoonMovies: Movie[] = [
     genres: ["Horror", "Comedy"],
     language: "Hindi",
     releaseDate: "15 Aug",
+    status: "coming_soon",
   },
 ];
