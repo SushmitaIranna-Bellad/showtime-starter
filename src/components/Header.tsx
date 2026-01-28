@@ -1,7 +1,8 @@
 import { Search, Menu, MapPin, ChevronDown } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import UserMenu from "./UserMenu";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,14 +12,14 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <div className="flex items-center gap-2">
+          <Link to="/" className="flex items-center gap-2">
             <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center glow-shadow">
               <span className="text-primary-foreground font-bold text-xl">B</span>
             </div>
             <span className="hidden sm:block text-xl font-bold text-foreground">
               Book<span className="text-primary">My</span>Show
             </span>
-          </div>
+          </Link>
 
           {/* Search Bar - Desktop */}
           <div className="hidden md:flex flex-1 max-w-xl mx-8">
@@ -41,10 +42,10 @@ const Header = () => {
               <ChevronDown className="w-4 h-4" />
             </button>
 
-            {/* Sign In Button */}
-            <Button variant="default" size="sm" className="hidden sm:flex">
-              Sign In
-            </Button>
+            {/* User Menu */}
+            <div className="hidden sm:block">
+              <UserMenu />
+            </div>
 
             {/* Mobile Menu Button */}
             <button
@@ -70,7 +71,7 @@ const Header = () => {
 
         {/* Navigation Links - Desktop */}
         <nav className="hidden md:flex items-center gap-8 pb-3 border-t border-border/50 pt-3">
-          <a href="#" className="text-sm font-medium text-primary">Movies</a>
+          <Link to="/" className="text-sm font-medium text-primary">Movies</Link>
           <a href="#" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Stream</a>
           <a href="#" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Events</a>
           <a href="#" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Plays</a>
@@ -83,7 +84,7 @@ const Header = () => {
       {isMenuOpen && (
         <div className="md:hidden glass-effect border-t border-border">
           <nav className="flex flex-col p-4 gap-3">
-            <a href="#" className="text-sm font-medium text-primary py-2">Movies</a>
+            <Link to="/" className="text-sm font-medium text-primary py-2">Movies</Link>
             <a href="#" className="text-sm font-medium text-muted-foreground hover:text-foreground py-2">Stream</a>
             <a href="#" className="text-sm font-medium text-muted-foreground hover:text-foreground py-2">Events</a>
             <a href="#" className="text-sm font-medium text-muted-foreground hover:text-foreground py-2">Plays</a>
@@ -92,9 +93,9 @@ const Header = () => {
               <MapPin className="w-4 h-4" />
               <span className="text-sm">Mumbai</span>
             </div>
-            <Button variant="default" size="sm" className="mt-2">
-              Sign In
-            </Button>
+            <div className="mt-2">
+              <UserMenu />
+            </div>
           </nav>
         </div>
       )}
